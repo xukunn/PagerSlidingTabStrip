@@ -305,6 +305,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     tab.setPadding(tabPadding, 0, tabPadding, 0);
     tabsContainer.addView(tab, position,
         shouldExpand ? expandedTabLayoutParams : defaultTabLayoutParams);
+    if(pager ==null) tabCount++;
   }
 
   private void updateTabStyles() {
@@ -582,6 +583,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     this.tabTypefaceStyle = style;
     updateTabStyles();
   }
+
 
   public void setTabBackground(int resId) {
     this.tabBackgroundResId = resId;
